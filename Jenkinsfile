@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Clone Git Repo') {
             steps {
-                git url: 'https://github.com/pfatima/cloudformation-template.git', branch: 'main'
+                git url: 'https://github.com/pfatima/cloudformation-template-s3.git', branch: 'main'
             }
         }
 
