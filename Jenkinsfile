@@ -15,7 +15,7 @@ pipeline {
     stages {
         stage('Checkout Repository') {
             steps {
-                git branch: 'main', url: 'https://github.com/riteshbehal/CloudFormation.git'
+                git branch: 'main', url: 'https://github.com/pfatima/cloudformation-template-s3.git'
             }
         }
 
