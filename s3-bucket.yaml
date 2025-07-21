@@ -1,13 +1,18 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Description: CloudFormation template to create an S3 bucket
 
+Parameters:
+  BucketName:
+    Type: String
+    Description: Name of the S3 bucket
+
 Resources:
   MyS3Bucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: fatima-s3-bucket1 # Change to a globally unique name
+      BucketName: !Ref BucketName
 
 Outputs:
-  BucketName:
-    Description: Name of the created S3 bucket
+  BucketNameOutput:
+    Description: The name of the bucket
     Value: !Ref MyS3Bucket
